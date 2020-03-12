@@ -204,6 +204,7 @@ define(["qlik", 'text!./template.html'], function( qlik, template) {
 
 				//console.log(scope.qHyperCube);
 				//console.log('app');
+				//app.field('Idioma').select([1], true, true);
 			}
 			
 			processData();
@@ -235,21 +236,10 @@ define(["qlik", 'text!./template.html'], function( qlik, template) {
 						selectedValue = dimension_values[i].title;
 					} 
 				}
-				scope.selectedValue = selectedValue;
+				scope.selectedValue = selectedValue; 
 				scope.dimension_values = dimension_values;
 				
-				scope.$watch('selectedValue', function() {
-                    if(typeof scope.selectedValue !== "undefined" && !scope.layout.readonly){
-                        app.field(scope.layout.field1).select([parseInt(scope.selectedValue,0)])
-                    }
-                });  
-				
-            })	
-			scope.$watch('selectedValue', function() {
-                    if(typeof scope.selectedValue !== "undefined"){
-                        app.field(scope.layout.field1).select([parseInt(scope.selectedValue,0)])
-                    }
-                });     
+            });	   
         }]
 		// <-----------------------------
 		
