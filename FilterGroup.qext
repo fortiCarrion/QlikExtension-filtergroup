@@ -1,0 +1,15 @@
+{
+	"name": "FilterGroup",
+	"description": "Variables agrupator in order to provide a better UX",
+	"type": "visualization",
+	"version": "1.0.0",
+	"icon": "extension",
+	"author": "Jair Carrion",
+	"homepage": "https://github.com/fortiCarrion",
+	"keywords": "qlik-sense, visualization",
+	"license": "MIT",
+	"repository": "",
+	"dependencies": {
+		"qlik-sense": ">=3.0.x"
+	}
+}

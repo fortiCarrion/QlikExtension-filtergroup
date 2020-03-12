@@ -1,0 +1,10 @@
+/* CSS */
+button:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+p {
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+}

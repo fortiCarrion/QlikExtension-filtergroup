@@ -1,0 +1,32 @@
+<style type="text/css">
+	button:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+p {
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+}
+</style>
+<div >
+	<!-- header -->
+	<div ng-init="switch1 = true" ng-if="switch1 == true">
+		<p>{{header1}} <br>
+		<strong>{{footer1}}</strong>
+		</p>
+		<hr>
+	</div>
+	<!-- dropdown -->
+	<div ng-init="switch2 = true" ng-if="switch2 == true"> 
+		<h4>{{label2}}</h4>
+		<!--<select ng-model="value" ng-init="opt=Ingles" ng-change="app.variable.setContent(settings.variable1, value);" class="lui-select">-->
+		<select ng-model="selectedValue" class="lui-select lui-select--gradient">
+			<option ng-click="AddDateDimension(selectedDate)"
+					ng-repeat="value in dimension_values track by $index"
+					value="{{value.title}}"
+					class="state_{{value.selection_state}}">{{value.title}}</option>
+		</select>		
+	</div>
+
+</div>
